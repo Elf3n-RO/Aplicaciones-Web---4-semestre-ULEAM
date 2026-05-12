@@ -1,0 +1,4 @@
+TAREA INDIVIDUAL:
+
+1. Diseñar una página web de ingreso de datos de clientes (CEDULA, NOMBRE,DIRECCIÓN, TELEFONO Y CORREO ELECTRÓNICO), utilizando HTML y CSS, el documento entregable es el archivo .pdf que incluya el código y la ejecución. Además el código se debe guardar en el repositorio GitLab.
+2. Subir el archivo en la tarea 3 en el aula virtual MOODLE.
