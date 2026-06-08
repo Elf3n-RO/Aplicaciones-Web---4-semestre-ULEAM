@@ -1,0 +1,15 @@
+1.Diseñar una página web (hoja de vida personal) con HTML, usando lo aprendido en CSS, aplicando incluyendo el uso de contenedores (<DIV>):
+
+–  Datos personales con foto
+
+–  Estudios Realizados
+
+–  Experiencia Laboral
+
+–  Capacitaciones
+
+–  Referencias personales(Tabla con columnas Nombre, Cargo/Profesión, Teléfono, correo electrónico), mínimo 3 referencias.
+
+2. DOCUMENTAR EL CÓDIGO Y LA EJECUCIÓN, INCLUIR ENLACE GIT.
+
+3. SUBIR EL ARCHIVO EN FORMATO PDF.

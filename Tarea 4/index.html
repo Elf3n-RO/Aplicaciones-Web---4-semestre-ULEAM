@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora - Bucle 5 Iteraciones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de 5 opciones</h1>
+
+    <label>Número 1</label>
+    <input type="text" id="num1" placeholder="Ej: 10" />
+
+    <label>Número 2</label>
+    <input type="text" id="num2" placeholder="Ej: 3" />
+
+    <button onclick="ejecutar()">Calcular</button>
+    <p class="error" id="err">Ingresa dos números válidos.</p>
+
+    <table id="tabla" style="display:none">
+      <thead>
+        <tr>
+          <th>Iteración</th>
+          <th>Operación</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo"></tbody>
+    </table>
+  </div>
+
+  <script>
+    function ejecutar() {
+      var a = parseFloat(document.getElementById('num1').value);
+      var b = parseFloat(document.getElementById('num2').value);
+      var err   = document.getElementById('err');
+      var tabla = document.getElementById('tabla');
+      var cuerpo = document.getElementById('cuerpo');
+
+      if (isNaN(a) || isNaN(b)) {
+        err.style.display = 'block';
+        tabla.style.display = 'none';
+        return;
+      }
+
+      err.style.display = 'none';
+      cuerpo.innerHTML = '';
+
+      var ops = [
+        ['1 - Suma',           a + ' + ' + b, a + b],
+        ['2 - Resta',          a + ' - ' + b, a - b],
+        ['3 - Multiplicación', a + ' × ' + b, a * b],
+        ['4 - División',       a + ' ÷ ' + b, b !== 0 ? a / b : 'Indefinido'],
+        ['5 - Módulo',         a + ' % ' + b, b !== 0 ? a % b : 'Indefinido'],
+      ];
+
+      for (var i = 0; i < ops.length; i++) {
+        var iter = ops[i][0];
+        var expr = ops[i][1];
+        var res  = ops[i][2];
+        var resultado = typeof res === 'number' ? parseFloat(res.toFixed(6)) : res;
+        var fila = document.createElement('tr');
+        fila.innerHTML = '<td>' + iter + '</td><td>' + expr + '</td><td><strong>' + resultado + '</strong></td>';
+        cuerpo.appendChild(fila);
+      }
+
+      tabla.style.display = 'table';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') ejecutar();
+    });
+  </script>
+</body>
+</html>
