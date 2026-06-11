@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Registro de Estudiantes</h1>
+
+        <form id="formatoEstudiante">
+
+            <div class="ingresar">
+                <label>Cedula:</label>
+                <input type="text" id="cedula">
+            </div>
+
+            <div class="ingresar">
+                <label>Apellido:</label>
+                <input type="text" id="apellido">
+            </div>
+
+            <div class="ingresar">
+                <label>Nombre:</label>
+                <input type="text" id="nombre">
+            </div>
+
+            <div class="ingresar">
+                <label>Direccion:</label>
+                <input type="text" id="direccion">
+            </div>
+
+            <div class="ingresar">
+                <label>Telefono:</label>
+                <input type="text" id="telefono">
+            </div>
+
+            <div class="ingresar">
+                <label>Correo Electronico:</label>
+                <input type="text" id="correo">
+            </div>
+
+            <div class="ingresar">
+                <label>Facultad:</label>
+                <select id="facultad">
+                    <option value="">Mejor Turismo? (Seleccione)</option>
+                    <option>Informatica</option>
+                    <option>Administración</option>
+                    <option>Salud</option>
+                    <option>Ingenieria</option>
+                </select>
+            </div>
+
+            <div class="ingresar">
+                <label>Nivel:</label>
+                <select id="nivel">
+                    <option value="">Nivel de tu sufrimito (Seleccione)</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </div>
+
+            <div class="ingresar">
+                <label>Paralelo:</label>
+                <select id="paralelo">
+                    <option value="">Elija tu letra favorita (Seleccione)</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </div>
+
+            <button type="submit">Guardar</button>
+
+        </form>
+
+        <h2>Lista de Estudiantes</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cedula</th>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Eliminar?</th>
+                </tr>
+            </thead>
+            <tbody id="tablaEstudiantes"></tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
